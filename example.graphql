@@ -1,0 +1,80 @@
+# query {
+#   hello
+# }
+
+# query {
+#   userList {
+#     message
+#     code
+#     profile {
+#       uid
+#       name
+#       email
+#       createdAt
+#     }
+#     responseAt
+#   }
+# }
+
+# query {
+#   userInfo(uid: 1) {
+#     profile {
+#       name
+#       email
+#     }
+#   }
+# }
+
+# query {
+#   moneyInfo {
+#     message
+#     code
+#     uid
+#     total
+#   }
+# }
+
+# query {
+#   userInfo(uid: 1) {
+#     profile {
+#       email
+#       name
+#     }
+#   }
+#   moneyInfo {
+#     total
+#   }
+# }
+
+# mutation {
+#   createUser(name: "박영희", email: "younghee_park@tmax.co.kr") {
+#     message
+#     code
+#     profile {
+#       uid
+#       name
+#       email
+#       createdAt
+#     }
+#     responseAt
+#   }
+# }
+
+# 부분 성공/부분 실패
+# query {
+#   userList {
+#     message
+#     code
+#   }
+#   userInfo(uid: 4) {
+#     message
+#     code
+#   }
+# }
+
+# 완전 실패
+# query {
+#   userInfo(uid: 1) {
+#     test
+#   }
+# }
